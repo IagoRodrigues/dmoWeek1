@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity"
+    android:padding="20sp">
+
+    <TextView
+        android:id="@+id/textview_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Usuário"/>
+
+    <EditText
+        android:id="@+id/editText_prontuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textview_usuario"
+        android:layout_below="@+id/textview_usuario"
+        android:hint="Números do prontuário"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/textview_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText_prontuario"
+        android:layout_below="@+id/editText_prontuario"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Senha"/>
+
+    <EditText
+        android:id="@+id/editText_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textview_senha"
+        android:layout_below="@+id/textview_senha"
+        android:inputType="number"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50sp"
+        android:text="Login"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+
+
+</RelativeLayout>
