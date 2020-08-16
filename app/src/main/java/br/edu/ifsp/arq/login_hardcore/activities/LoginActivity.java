@@ -40,29 +40,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
         int user, senha;
+        Intent intent = new Intent(this, AccessActivity.class);
 
         try {
             user = converteDados(prontuarioEditText);
             senha = converteDados(senhaEditText);
 
             if (login.fazerLogin(user, senha)) {
-                Intent intent = new Intent(this, AccessActivity.class);
+                String result = "Bem vindo " + user;
+                intent.putExtra("Value", result);
                 startActivity(intent);
             } else {
-                Intent intent = new Intent(this, AccessActivity.class);
+                String result = "Erro no Login";
+                intent.putExtra("Value", result);
                 startActivity(intent);
             }
         }catch (CampoVazioException cve){
             Toast.makeText(this, "Os campos usuário e senha devem ser preenchidos!", Toast.LENGTH_SHORT).show();
-        }catch (NumberFormatException nfe){
-            Toast.makeText(this, "Ih rapaz! Errei a conversão", Toast.LENGTH_SHORT).show();
-        }
-        catch (Exception e){
-            Toast.makeText(this, "Ih rapaz! Erro onClick!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private int converteDados(EditText texto) throws NumberFormatException, CampoVazioException, Exception{
+    private int converteDados(EditText texto) throws CampoVazioException{
         int nro = 0;
 
         if (texto.getText().toString().matches("")){

@@ -7,7 +7,7 @@
     tools:context=".activities.AccessActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolBar_app"
+        android:id="@+id/toolBarAccess_app"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#6300ed"
@@ -18,9 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp"
-        android:layout_below="@+id/toolBar_app">
+        android:layout_below="@+id/toolBarAccess_app">
 
         <TextView
+            android:id="@+id/textView_resposta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
