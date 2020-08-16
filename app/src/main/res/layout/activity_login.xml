@@ -16,8 +16,8 @@
         />
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:padding="20dp"
         android:layout_below="@+id/toolBar_app">
 
@@ -30,16 +30,17 @@
             android:textSize="15sp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="Usuário"/>
+            android:text="@string/user"/>
 
         <EditText
             android:id="@+id/editText_prontuario"
+            android:autofillHints="1234567"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/textView_usuario"
             android:layout_below="@+id/textView_usuario"
             android:textSize="15sp"
-            android:hint="Números do prontuário"
+            android:hint="@string/nro_pront"
             android:inputType="number"/>
 
         <TextView
@@ -52,11 +53,12 @@
             android:textSize="15sp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="Senha"/>
+            android:text="@string/password"/>
 
         <EditText
             android:id="@+id/editText_senha"
             android:layout_width="match_parent"
+            android:autofillHints="@string/hint_senha"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/textView_senha"
             android:layout_below="@+id/textView_senha"
@@ -70,7 +72,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="50sp"
-            android:text="Login"
+            android:text="@string/login"
             android:textSize="15sp"
             android:textStyle="bold"
             />
