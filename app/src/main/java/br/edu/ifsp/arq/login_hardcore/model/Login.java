@@ -12,7 +12,7 @@ public class Login {
         return sLogin;
     }
 
-    public boolean fazerLogin(int senha, int user){
+    public boolean fazerLogin(int user, int senha){
         return (senha == Constantes.SENHA) && (user == Constantes.USER);
     }
 }
